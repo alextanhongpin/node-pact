@@ -1,0 +1,27 @@
+{
+  "name": "pact",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "consumer": "./node_modules/.bin/mocha client/client.spec.js",
+    "server": "node server/consumer-test/test-products-service.js"
+
+  },
+  "author": "alextanhongpin <alextan@seekasia.com>",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.2",
+    "global": "^4.3.2",
+    "request-promise-native": "^1.0.5",
+    "standard": "^10.0.3"
+  },
+  "devDependencies": {
+    "@pact-foundation/pact": "^5.3.0",
+    "chai": "^4.1.2",
+    "es6-promise": "^4.2.2",
+    "mocha": "^4.0.1",
+    "sinon": "^4.1.3",
+    "sinon-chai": "^2.14.0"
+  }
+}
