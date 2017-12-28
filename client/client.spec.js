@@ -10,16 +10,16 @@ const expect = chai.expect
 chai.use(sinonChai)
 
 describe('Product handling', () => {
-  const sandbox = sinon.createSandbox()
+  // const sandbox = sinon.createSandbox()
 
   before(async function () {
     this.timeout(10000) // It takes time to start the mock server
     await provider.setup()
   })
 
-  afterEach(() => {
-    sandbox.restore()
-  })
+  // afterEach(() => {
+  //   // sandbox.restore()
+  // })
 
   after(async function () {
     this.timeout(10000) // It takes time to stop the mock server and gather the contracts
@@ -32,6 +32,7 @@ describe('Product handling', () => {
 
       // const consoleSpy = sandbox.spy(console, 'log')
       const name = await client.getAllProducts()
+      console.log('name', name)
       expect(name).to.be.equal('Foo')
       // expect(consoleSpy).to.have.been.calledWith('CLIENT: Current products are: Foo')
       await provider.verify()

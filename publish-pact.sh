@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-PACT_PATH=client/mock-server/pacts
+PACT_PATH=pacts
 
 for f in ${PACT_PATH}/*.json; do \
 	consumer=$(jq '.consumer.name' $f | sed s'/"//g')
